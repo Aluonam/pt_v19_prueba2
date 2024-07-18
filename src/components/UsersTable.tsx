@@ -3,32 +3,32 @@ import { useEffect, useState } from "react"
 interface userDataPropstype {
     gender: string,
     name: {
-            title: "Miss",
-            first: "Maya",
-            last: "Davies"
+            title: string,
+            first: string,
+            last: string
             },
     location: {
                 street: {
-                        number: 5372,
-                        name: "Victoria Road"
+                        number: number,
+                        name: string
                         },
-                city: "Bristol",
-                state: "Tyne and Wear",
+                city: string,
+                state: string,
                 },
-    email: "maya.davies@example.com",
+    email: string,
     dob: {
-            date: "2000-08-21T20:24:47.121Z",
-            age: 23
+            date: string,
+            age: number
             },
     registered: {
-                    date: "2011-07-16T00:16:21.968Z",
-                    age: 13
+                    date: string,
+                    age: number
                     },
-    phone: "019467 40094",
-    cell: "07257 887882",
+    phone: string,
+    cell: string,
     id: {
-            name: "NINO",
-            value: "YH 32 62 61 G"
+            name: string,
+            value: string
             },
 }
 
@@ -50,6 +50,18 @@ const UsersTable = () => {
         setUserData(data.results)
     }
 
+    const printTable = userData?.map((oneUser)=>{
+        return(
+                <tr>
+                    <td>{oneUser.name.first}&nbsp;{oneUser.name.last}</td>
+                    <td>{oneUser.gender}</td>
+                    <td>{oneUser.location.state},&nbsp;{oneUser.location.city}</td>
+                    <td>{oneUser.email}</td>
+                    <td>{oneUser.phone}</td>
+                </tr>
+        )
+    })
+
   return (
     <>
         <table  style={{backgroundColor:'aliceblue', border:'1px solid black'}}>
@@ -59,15 +71,11 @@ const UsersTable = () => {
                     <td>Gender</td>
                     <td>Location</td>
                     <td>Email</td>
+                    <td>Phone</td>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Name</td>
-                    <td>Gender</td>
-                    <td>Location</td>
-                    <td>Email</td>
-                </tr>
+                {printTable}
             </tbody>
         </table>
     </>
