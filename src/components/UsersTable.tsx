@@ -46,7 +46,6 @@ const UsersTable = () => {
     const callDataBase = async () =>{
         const call = await fetch(`https://randomuser.me/api/?results=10`);
         const data = await call.json();
-        console.log(data.results)
         setUserData(data.results)
     }
 
