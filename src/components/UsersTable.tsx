@@ -1,5 +1,21 @@
+import { useEffect, useState } from "react"
 
 const UsersTable = () => {
+
+    // const [userData, setUserData] = useState<{}>({})
+
+
+    useEffect(() => {
+       callDataBase()
+    }, [])
+    
+
+    const callDataBase = async () =>{
+        const call = await fetch(`https://randomuser.me/api/?results=10`);
+        const data = await call.json();
+        console.log(data.results)
+    }
+
   return (
     <>
         <table  style={{backgroundColor:'aliceblue', border:'1px solid black'}}>
