@@ -1,5 +1,6 @@
 
 import './App.css'
+import Clock from './components/Clock'
 import UsersTable from './components/UsersTable'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <div>
         <UsersTable></UsersTable>
+        <Clock></Clock>
       </div>
       
     </>
