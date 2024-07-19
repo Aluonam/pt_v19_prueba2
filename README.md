@@ -7,4 +7,4 @@
 
 **1.** Añade la hora actual y crea un botón que actualice la hora.
 
-**2.** Crea un input que permita escribir al usuario y al pulsar un botón  ponga la última letra de cada palabra en mayúscula. 
+**2.** Crea un input que permita escribir al usuario y al pulsar un botón ponga la última letra de cada palabra en mayúscula. 
