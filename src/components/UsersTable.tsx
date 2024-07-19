@@ -63,6 +63,9 @@ const UsersTable = () => {
 
   return (
     <>
+    <div>
+
+    
         <table  style={{backgroundColor:'aliceblue', border:'1px solid black'}}>
             <thead >
                 <tr style={{backgroundColor:'aliceblue', border:'1px solid black'}}>
@@ -77,6 +80,7 @@ const UsersTable = () => {
                 {printTable}
             </tbody>
         </table>
+    </div>
     </>
   )
 }

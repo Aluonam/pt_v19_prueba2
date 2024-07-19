@@ -7,8 +7,9 @@ function App() {
 
   return (
     <>
-      <div>
+      <div style={{display:'flex', flexDirection:'column'}}>
         <UsersTable></UsersTable>
+        <br></br>
         <Clock></Clock>
       </div>
       
